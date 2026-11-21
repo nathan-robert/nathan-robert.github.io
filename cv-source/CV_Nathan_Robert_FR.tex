@@ -1,0 +1,143 @@
+% =====================================================================
+% NATHAN ROBERT - ONE-PAGE CV (Overleaf / pdflatex)
+% Reference: classic minimalist, single-column resume.
+% HOW TO PERSONALIZE: complete the fields below, including LinkedIn.
+% Once LinkedInURL is filled in, a SCANNABLE QR CODE is generated.
+% No additional images are required.
+% =====================================================================
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=17.5mm,top=17mm,bottom=16mm]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{qrcode}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\hypersetup{colorlinks=true,urlcolor=black,pdfauthor={Nathan Robert},pdftitle={CV - Nathan Robert}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.015}
+\pagestyle{empty}
+\definecolor{CVGray}{gray}{0.33}
+
+% -------- EDIT THESE FOUR FIELDS --------------------------------------
+\newcommand{\CVEmail}{} % e.g. name@email.com
+\newcommand{\CVPhone}{} % e.g. +33 6 ...
+\newcommand{\LinkedInURL}{https://www.linkedin.com/in/nathan-robert-b9423a320/} % e.g. https://www.linkedin.com/in/your-profile/
+\newcommand{\CVGitHub}{} % e.g. https://github.com/your-username
+% ---------------------------------------------------------------------
+
+\newcommand{\contactitem}[2]{%
+  \ifdefempty{#2}{}{#1\,#2\par}%
+}
+\newcommand{\renderemail}{%
+  \ifdefempty{\CVEmail}{}{\faEnvelope\,\href{mailto:\CVEmail}{\CVEmail}\par}%
+}
+\newcommand{\renderphone}{%
+  \ifdefempty{\CVPhone}{}{\faPhone\,\CVPhone\par}%
+}
+\newcommand{\renderlinkedin}{%
+  \ifdefempty{\LinkedInURL}{}{\faLinkedin\,\href{\LinkedInURL}{Profil LinkedIn}\par}%
+}
+\newcommand{\rendergithub}{%
+  \ifdefempty{\CVGitHub}{}{\faGithub\,\href{\CVGitHub}{Profil GitHub}\par}%
+}
+\newcommand{\renderqr}{%
+  \ifdefempty{\LinkedInURL}{%
+    \fbox{\begin{minipage}[c][17mm][c]{17mm}\centering
+      {\fontsize{9}{10}\selectfont\bfseries QR}\\[2pt]
+      {\fontsize{6.2}{7}\selectfont LINKEDIN}
+    \end{minipage}}%
+  }{\href{\LinkedInURL}{\qrcode[height=17mm]{\LinkedInURL}}}%
+}
+\newcommand{\cvsection}[1]{%
+  \vspace{11pt}
+  {\fontsize{11.1}{12.7}\selectfont\bfseries\MakeUppercase{#1}}\par
+  \vspace{2.5pt}\hrule height .50pt\vspace{5pt}
+}
+\newcommand{\cvrole}[3]{%
+  {\fontsize{10}{12}\selectfont\bfseries #1}\hfill
+  {\fontsize{9.1}{11}\selectfont #2}\par
+  {\fontsize{9.0}{11}\selectfont\color{CVGray}#3}\par
+  \vspace{2pt}
+}
+\newenvironment{cvbullets}{%
+  \begin{itemize}[leftmargin=13pt,label={\textbullet},topsep=2pt,partopsep=0pt,
+    parsep=0pt,itemsep=1.3pt]
+}{\end{itemize}}
+\newcommand{\cvsmallgap}{\vspace{3.8pt}}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.54\textwidth}
+  {\fontsize{22.5}{26}\selectfont\bfseries Nathan ROBERT}\par
+  \vspace{3.5pt}
+  {\fontsize{10.4}{12.5}\selectfont IA \& Machine Learning $\vert$ NLP, Fine-Tuning de LLM}\par
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.435\textwidth}
+\setlength{\tabcolsep}{0pt}
+\begin{tabular}{@{}!{\vrule width .5pt}@{\hspace{9pt}}p{.64\linewidth}@{\hspace{5pt}}c@{}}
+  \begin{minipage}[c]{\linewidth}
+    {\fontsize{8.3}{10.6}\selectfont
+    \faMapMarker*\, Toulouse, France\par
+    \renderemail\renderphone\renderlinkedin\rendergithub}
+  \end{minipage}
+  & \renderqr
+\end{tabular}
+\end{minipage}
+\vspace{5pt}
+
+
+\cvsection{Profil}
+Étudiant ingénieur en informatique à l'ENSEEIHT, orienté intelligence artificielle et traitement automatique du langage. Après un stage en fine-tuning de LLM open-source chez CPMS, j'y développe depuis octobre 2026 des solutions d'IA et de machine learning en freelance.
+
+\cvsection{Compétences}
+\textbf{IA / NLP :} Transformers, modèles de type BERT, classification documentaire, fine-tuning supervisé de LLM, LoRA, QLoRA, évaluation.\\[1.8pt]
+\textbf{Bibliothèques :} PyTorch, Hugging Face (Transformers, Datasets, PEFT, TRL), Unsloth, bitsandbytes.\\[1.8pt]
+\textbf{Programmation / outils :} Python, C, OCaml, Ada, SQL, Linux ; préparation de données, tokenisation, optimisation GPU.
+
+\cvsection{Expérience professionnelle}
+\cvrole{Freelance IA \& Machine Learning | CPMS}{Oct. 2026 -- Aujourd'hui}{Centre de Prévoyance Médico-Sociale \textbar\ Toulouse \textbar\ À distance}
+\begin{cvbullets}
+  \item Développement de solutions de classification de documents à l'aide du machine learning et de modèles NLP de type BERT.
+  \item Adaptation de modèles de langage par fine-tuning, évaluation des performances et analyse des erreurs.
+  \item Préparation et traitement de datasets, participation à l'intégration des modèles d'IA dans des applications.
+\end{cvbullets}
+\cvsmallgap
+\cvrole{Stagiaire IA générative / Fine-Tuning de LLM | CPMS}{Juin -- Juil. 2026}{Centre de Prévoyance Médico-Sociale \textbar\ Paris \textbar\ Sur site}
+\begin{cvbullets}
+  \item Étude des architectures Transformer et adaptation de LLM open-source à un cas d'usage métier impliquant des documents médicaux sensibles et des enjeux RGPD.
+  \item Constitution de datasets instruction--réponse, nettoyage, normalisation, tokenisation et gestion des chat templates.
+  \item Expérimentations de fine-tuning supervisé avec LoRA / QLoRA et quantification 4/8 bits pour optimiser l'utilisation GPU.
+  \item Réglage des hyperparamètres : learning rate, batch size, epochs, accumulation des gradients et warmup.
+  \item Comparaison prompting / fine-tuning, analyses d'erreurs, itérations et prise en compte du surapprentissage, des hallucinations et de la généralisation.
+\end{cvbullets}
+
+\cvsection{Formation}
+\cvrole{Diplôme d'ingénieur en informatique | ENSEEIHT -- Toulouse INP}{2025 -- 2028}{Toulouse \textbar\ Formation en cours}
+\vspace{2pt}
+\cvrole{Classes préparatoires (CPGE MP2I / MPI) | Lycée Janson-de-Sailly}{2022 -- 2025}{Paris}
+
+\cvsection{Projets techniques}
+\textbf{2025} \textbar\ Conception d'un modèle de prédiction de l'expansion urbaine.\\[1.7pt]
+\textbf{2024} \textbar\ Développement d'un simulateur de match de football en 2D.\\[1.7pt]
+\textbf{2023} \textbar\ Développement d'un jeu vidéo.
+
+\cvsection{Langues \& engagements}
+\textbf{Langues :} Français (natif), anglais (C1), espagnol (intermédiaire).\\[1.7pt]
+\textbf{Bénévolat :} Service et distribution de repas aux Restaurants du Cœur (2016--2022).\\[1.7pt]
+\textbf{Centres d'intérêt :} Force athlétique, football, programmation.
+% Expérience plus ancienne du CV d'origine, non affichée :
+% stage de découverte informatique chez Alan (février 2019).
+
+
+\end{document}
