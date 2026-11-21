@@ -20,6 +20,13 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_ROOT = ROOT / "dist" if (ROOT / "dist" / "index.html").exists() else ROOT
 OUT = SITE_ROOT / "documents"
 LINKEDIN = "https://www.linkedin.com/in/nathan-robert-b9423a320/"
+PORTFOLIO = "https://nathan-robert.github.io/"
+CPMS = "https://www.cpms.fr/"
+PROJECT_URLS = {
+    '2025': 'https://github.com/nathan-robert/prediction-of-the-urbanization-of-New-Delhi',
+    '2024': 'https://github.com/nathan-robert/Football-Match-simulation',
+    '2023': 'https://github.com/nathan-robert/Pymon',
+}
 FONT = "Helvetica"
 BOLD = "Helvetica-Bold"
 font_dir = Path('/usr/share/fonts/truetype/liberation')
@@ -34,7 +41,7 @@ DATA = {
   'subtitle': 'IA & Machine Learning | NLP, Fine-tuning de LLM',
   'linkedin': 'Profil LinkedIn',
   'summary_title': 'PROFIL',
-  'summary': "Étudiant ingénieur en informatique à l'ENSEEIHT, orienté intelligence artificielle et traitement automatique du langage. Après un stage en fine-tuning de LLM open-source chez CPMS, j'y développe depuis octobre 2026 des solutions d'IA et de machine learning en freelance.",
+  'summary': "Étudiant ingénieur en informatique à l'ENSEEIHT, avec une expérience pratique en NLP et en fine-tuning de LLM. Après un stage chez CPMS, j'y développe depuis octobre 2026 des solutions de classification documentaire et d'adaptation de modèles de langage en freelance.",
   'skills_title': 'COMPÉTENCES',
   'skills': [
    ('IA / NLP', 'Transformers, modèles de type BERT, classification documentaire, fine-tuning supervisé de LLM, LoRA, QLoRA, évaluation.'),
@@ -43,17 +50,16 @@ DATA = {
   ],
   'experience_title': 'EXPÉRIENCE PROFESSIONNELLE',
   'experience': [
-   ('Freelance IA & Machine Learning | CPMS', "Oct. 2026 - Aujourd'hui", 'Centre de Prévoyance Médico-Sociale | Toulouse | À distance', [
-    "Développement de solutions de classification de documents à l'aide du machine learning et de modèles NLP de type BERT.",
+   ('Freelance IA & Machine Learning | CPMS', "Oct. 2026 - Aujourd'hui", 'Gestion d’assurance santé | Toulouse | À distance', [
+    "Développement d'une chaîne de classification documentaire : extraction de texte/OCR, préparation des données et modèles NLP de type BERT.",
     "Adaptation de modèles de langage par fine-tuning, évaluation des performances et analyse des erreurs.",
-    "Préparation et traitement de datasets, participation à l'intégration des modèles d'IA dans des applications.",
+    "Intégration des modèles dans des applications via une interface FastAPI.",
    ]),
-   ('Stagiaire IA générative / Fine-tuning de LLM | CPMS', 'Juin - Juil. 2026', 'Centre de Prévoyance Médico-Sociale | Paris | Sur site', [
-    'Étude des architectures Transformer et adaptation de LLM open-source à un cas d’usage métier impliquant des documents médicaux sensibles et des enjeux RGPD.',
-    'Constitution de datasets instruction-réponse, nettoyage, normalisation, tokenisation et gestion des chat templates.',
-    'Expérimentations de fine-tuning supervisé avec LoRA / QLoRA et quantification 4/8 bits pour optimiser l’utilisation GPU.',
-    'Réglage des hyperparamètres : learning rate, batch size, epochs, accumulation des gradients et warmup.',
-    'Comparaison prompting / fine-tuning, analyses d’erreurs, itérations et prise en compte du surapprentissage, des hallucinations et de la généralisation.',
+   ('Stagiaire IA générative / Fine-tuning de LLM | CPMS', 'Juin - Juil. 2026', 'Gestion d’assurance santé | Paris | Sur site', [
+    'Étude des architectures Transformer et adaptation de LLM open source à un cas d’usage métier sur des contenus médicaux, avec des contraintes de confidentialité.',
+    'Constitution de datasets instruction-réponse : nettoyage, normalisation, tokenisation et mise en forme des échanges.',
+    'Expérimentations de fine-tuning supervisé avec LoRA / QLoRA, réglage des hyperparamètres et quantification 4/8 bits pour maîtriser la mémoire GPU.',
+    'Comparaison prompting / fine-tuning et analyse des erreurs, du surapprentissage, des hallucinations et de la généralisation.',
    ]),
   ],
   'education_title': 'FORMATION',
@@ -63,14 +69,14 @@ DATA = {
   ],
   'projects_title': 'PROJETS TECHNIQUES',
   'projects': [
-   ('2025', "Conception d'un modèle de prédiction de l'expansion urbaine."),
-   ('2024', "Développement d'un simulateur de match de football en 2D."),
-   ('2023', "Développement d'un jeu vidéo."),
+   ('2025', 'Expansion urbaine à New Delhi : exploration de modèles de deep learning.'),
+   ('2024', 'Simulateur de football à cinq en 2D : Python, Pygame et stratégies de jeu.'),
+   ('2023', 'Pymon : fan game 2D en Python avec Pygame (projet en cours).'),
   ],
   'activities_title': 'LANGUES & ENGAGEMENTS',
   'activities': [
    ('Langues', 'Français (natif), anglais (C1), espagnol (intermédiaire).'),
-   ('Bénévolat', 'Service et distribution de repas aux Restaurants du Cœur (2016-2022).'),
+   ('Bénévolat', 'Service et distribution de repas aux Restos du Cœur.'),
    ("Centres d'intérêt", 'Force athlétique, football, programmation.'),
   ]
  },
@@ -78,7 +84,7 @@ DATA = {
   'subtitle': 'AI & Machine Learning | NLP, LLM Fine-tuning',
   'linkedin': 'LinkedIn profile',
   'summary_title': 'SUMMARY',
-  'summary': 'Engineering student in computer science at ENSEEIHT, focused on artificial intelligence and natural language processing. After a 2026 internship on open-source LLM fine-tuning at CPMS, now developing AI and machine learning solutions for the same organization as a freelancer.',
+  'summary': 'Computer science engineering student at ENSEEIHT with hands-on experience in NLP and LLM fine-tuning. Following an internship at CPMS, I have been developing document-classification and language-model adaptation solutions as a freelancer since October 2026.',
   'skills_title': 'SKILLS',
   'skills': [
    ('AI / NLP', 'Transformers, BERT-family models, document classification, supervised LLM fine-tuning, LoRA, QLoRA, model evaluation.'),
@@ -87,17 +93,16 @@ DATA = {
   ],
   'experience_title': 'PROFESSIONAL EXPERIENCE',
   'experience': [
-   ('Freelance AI & Machine Learning Engineer | CPMS', 'Oct 2026 - Present', 'Centre de Prévoyance Médico-Sociale | Toulouse, France | Remote', [
-    'Developing document-classification solutions with machine learning and BERT-family NLP models.',
+   ('Freelance AI & Machine Learning | CPMS', 'Oct 2026 - Present', 'Medical plan TPA | Toulouse, France | Remote', [
+    'Developing a document-classification workflow: text extraction/OCR, data preparation and BERT-family NLP models.',
     'Fine-tuning language models for domain-specific needs; evaluating performance and analyzing errors.',
-    'Preparing and processing datasets, and contributing to AI model integration into applications.',
+    'Integrating models into applications through a FastAPI interface.',
    ]),
-   ('AI / LLM Fine-tuning Intern | CPMS', 'Jun 2026 - Jul 2026', 'Centre de Prévoyance Médico-Sociale | Paris, France | On-site', [
-    'Studied Transformer architectures and adapted open-source LLMs to a specific business use case involving sensitive medical documents and privacy / GDPR requirements.',
-    'Built instruction-response datasets; performed cleaning, normalization, tokenization and prompt / chat-template formatting.',
-    'Ran supervised fine-tuning experiments using LoRA / QLoRA and 4-/8-bit quantization to optimize GPU memory use.',
-    'Tuned training settings (learning rate, batch size, epochs, gradient accumulation and warmup).',
-    'Compared prompted and fine-tuned models through evaluation and error analysis; studied overfitting, hallucinations and generalization.',
+   ('AI / LLM Fine-tuning Intern | CPMS', 'Jun 2026 - Jul 2026', 'Medical plan TPA | Paris, France | On-site', [
+    'Studied Transformer architectures and adapted open-source LLMs to a business use case involving medical content and privacy constraints.',
+    'Built instruction-response datasets: cleaning, normalization, tokenization and chat-template formatting.',
+    'Ran supervised fine-tuning experiments with LoRA / QLoRA, hyperparameter tuning and 4-/8-bit quantization to manage GPU memory use.',
+    'Compared prompting and fine-tuning through error analysis, examining overfitting, hallucinations and generalization.',
    ]),
   ],
   'education_title': 'EDUCATION',
@@ -107,14 +112,14 @@ DATA = {
   ],
   'projects_title': 'SELECTED PROJECTS',
   'projects': [
-   ('2025', 'Machine learning model for predicting urban expansion.'),
-   ('2024', 'Development of a 2D football match simulator.'),
-   ('2023', 'Video game development.'),
+   ('2025', 'Urban expansion in New Delhi: exploring deep learning models.'),
+   ('2024', '2D five-a-side football simulator: Python, Pygame and game strategies.'),
+   ('2023', 'Pymon: a 2D fan game built with Python and Pygame (ongoing).'),
   ],
   'activities_title': 'LANGUAGES & ACTIVITIES',
   'activities': [
    ('Languages', 'French (native), English (C1), Spanish (intermediate).'),
-   ('Volunteering', 'Meal service and distribution at Les Restaurants du Cœur (2016-2022).'),
+   ('Volunteering', 'Meal service and distribution with Les Restos du Cœur.'),
    ('Interests', 'Powerlifting, football, programming.'),
   ]
  }
@@ -142,22 +147,36 @@ def build(lang):
     c.drawString(margin,h-84,data['subtitle'])
     c.setFillColor(gray)
     c.setFont(FONT,9.5)
-    c.drawRightString(w-margin-58,h-55,'Toulouse, France')
+    text_right=w-margin-70
+    c.drawRightString(text_right,h-48,'Toulouse, France')
     c.setFillColor(accent)
-    c.drawRightString(w-margin-58,h-71,data['linkedin'])
+    c.drawRightString(text_right,h-64,data['linkedin'])
     tw=pdfmetrics.stringWidth(data['linkedin'],FONT,9.5)
-    c.linkURL(LINKEDIN,(w-margin-58-tw,h-74,w-margin-58,h-62),relative=0)
-    code=qr.QrCodeWidget(LINKEDIN)
+    c.linkURL(LINKEDIN,(text_right-tw,h-67,text_right,h-55),relative=0)
+    portfolio_label='nathan-robert.github.io'
+    c.setFont(FONT,9.3)
+    c.drawRightString(text_right,h-80,portfolio_label)
+    tw=pdfmetrics.stringWidth(portfolio_label,FONT,9.3)
+    c.linkURL(PORTFOLIO,(text_right-tw,h-83,text_right,h-71),relative=0)
+    code=qr.QrCodeWidget(PORTFOLIO,barBorder=4,barLevel='M')
     x1,y1,x2,y2=code.getBounds()
-    d=Drawing(47,47,transform=[47/(x2-x1),0,0,47/(y2-y1),0,0])
+    qr_size=58
+    qr_left=w-margin-qr_size
+    qr_bottom=h-92
+    d=Drawing(qr_size,qr_size,transform=[qr_size/(x2-x1),0,0,qr_size/(y2-y1),0,0])
     d.add(code)
-    renderPDF.draw(d,c,w-margin-47,h-87)
-    c.linkURL(LINKEDIN,(w-margin-47,h-87,w-margin,h-40),relative=0)
+    c.setFillColor(HexColor('#ffffff'))
+    c.rect(qr_left-2,qr_bottom-2,qr_size+4,qr_size+4,fill=1,stroke=0)
+    renderPDF.draw(d,c,qr_left,qr_bottom)
+    c.linkURL(PORTFOLIO,(qr_left,qr_bottom,w-margin,qr_bottom+qr_size),relative=0)
+    c.setFillColor(gray)
+    c.setFont(FONT,8)
+    c.drawCentredString(qr_left+qr_size/2,h-102,'PORTFOLIO')
     c.setStrokeColor(accent)
     c.setLineWidth(1.3)
-    c.line(margin,h-100,w-margin,h-100)
-    y=h-109
-    body=ParagraphStyle('body',fontName=FONT,fontSize=9.8,leading=12.6,textColor=ink,spaceAfter=0)
+    c.line(margin,h-113,w-margin,h-113)
+    y=h-122
+    body=ParagraphStyle('body',fontName=FONT,fontSize=10,leading=13,textColor=ink,spaceAfter=0)
     bullet_style=ParagraphStyle('bullet',parent=body,leftIndent=10,firstLineIndent=0,bulletIndent=0)
     meta=ParagraphStyle('meta',fontName=FONT,fontSize=9,leading=11.7,textColor=gray)
     title=ParagraphStyle('role',fontName=BOLD,fontSize=9.8,leading=12.2,textColor=ink)
@@ -190,7 +209,8 @@ def build(lang):
         c.setFillColor(gray)
         c.setFont(FONT,9)
         c.drawRightString(w-margin,y-10,date)
-        para(escape(name),title,width=content-date_width-14,gap=1)
+        linked_name=escape(name).replace('CPMS', f'<link href="{CPMS}" color="#1c5b69">CPMS</link>')
+        para(linked_name,title,width=content-date_width-14,gap=1)
         para(escape(location),meta,gap=3)
     section(data['summary_title'])
     para(escape(data['summary']),gap=1)
@@ -211,7 +231,10 @@ def build(lang):
         role(*row)
     section(data['projects_title'])
     for year,value in data['projects']:
-        para(f'<b>{year}</b> | {escape(value)}',gap=2)
+        project_title,project_detail=value.split(':',1)
+        project_link=f'<link href="{PROJECT_URLS[year]}" color="#1c5b69">{escape(project_title.rstrip())}</link>'
+        separator=' :' if lang=='fr' else ':'
+        para(f'<b>{year}</b> | {project_link}{separator}{escape(project_detail)}',gap=2)
     section(data['activities_title'])
     for name,value in data['activities']:
         para(f'<b>{escape(name)} :</b> {escape(value)}' if lang=='fr' else f'<b>{escape(name)}:</b> {escape(value)}',gap=2)
