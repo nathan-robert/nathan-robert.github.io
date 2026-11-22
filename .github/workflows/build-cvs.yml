@@ -1,0 +1,39 @@
+name: Build bilingual CV PDFs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv-source/**'
+      - '.github/workflows/build-cvs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install fonts and ReportLab
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation
+          python -m pip install 'reportlab>=4.2,<5'
+      - name: Generate French and English PDFs
+        run: python cv-source/build_cvs.py
+      - name: Commit regenerated PDFs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add documents/cv-nathan-robert-fr.pdf documents/cv-nathan-robert-en.pdf
+          if git diff --cached --quiet; then
+            echo 'PDFs already up to date.'
+          else
+            git commit -m 'Regenerate bilingual CVs for Year 2 HPC & Big Data'
+            git push origin HEAD:main
+          fi

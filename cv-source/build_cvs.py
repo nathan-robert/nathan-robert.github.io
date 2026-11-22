@@ -41,7 +41,7 @@ DATA = {
   'subtitle': 'IA & Machine Learning | NLP, Fine-tuning de LLM',
   'linkedin': 'Profil LinkedIn',
   'summary_title': 'PROFIL',
-  'summary': "Étudiant ingénieur en informatique à l'ENSEEIHT, avec une expérience pratique en NLP et en fine-tuning de LLM. Après un stage chez CPMS, j'y développe depuis octobre 2026 des solutions de classification documentaire et d'adaptation de modèles de langage en freelance.",
+  'summary': "Étudiant ingénieur en 2e année à l'ENSEEIHT (filière HPC & Big Data), avec une expérience pratique en NLP et en fine-tuning de LLM. Après un stage chez CPMS, j'y développe depuis octobre 2026 des solutions de classification documentaire et d'adaptation de modèles de langage en freelance.",
   'skills_title': 'COMPÉTENCES',
   'skills': [
    ('IA / NLP', 'Transformers, modèles de type BERT, classification documentaire, fine-tuning supervisé de LLM, LoRA, QLoRA, évaluation.'),
@@ -64,7 +64,7 @@ DATA = {
   ],
   'education_title': 'FORMATION',
   'education': [
-   ("Diplôme d'ingénieur en informatique | ENSEEIHT - Toulouse INP", '2025 - 2028', 'Toulouse | Formation en cours'),
+   ("Diplôme d'ingénieur en informatique | ENSEEIHT - Toulouse INP", '2025 - 2028', 'Toulouse | 2e année - Filière HPC & Big Data (en cours)'),
    ('Classes préparatoires (CPGE MP2I / MPI) | Lycée Janson-de-Sailly', '2022 - 2025', 'Paris'),
   ],
   'projects_title': 'PROJETS TECHNIQUES',
@@ -84,7 +84,7 @@ DATA = {
   'subtitle': 'AI & Machine Learning | NLP, LLM Fine-tuning',
   'linkedin': 'LinkedIn profile',
   'summary_title': 'SUMMARY',
-  'summary': 'Computer science engineering student at ENSEEIHT with hands-on experience in NLP and LLM fine-tuning. Following an internship at CPMS, I have been developing document-classification and language-model adaptation solutions as a freelancer since October 2026.',
+  'summary': 'Second-year engineering student at ENSEEIHT in the HPC & Big Data track, with hands-on experience in NLP and LLM fine-tuning. After an internship at CPMS, I have been developing document-classification and language-model adaptation solutions as a freelancer since October 2026.',
   'skills_title': 'SKILLS',
   'skills': [
    ('AI / NLP', 'Transformers, BERT-family models, document classification, supervised LLM fine-tuning, LoRA, QLoRA, model evaluation.'),
@@ -107,7 +107,7 @@ DATA = {
   ],
   'education_title': 'EDUCATION',
   'education': [
-   ('Engineering Degree in Computer Science | ENSEEIHT - Toulouse INP', '2025 - 2028', 'Toulouse, France | Currently enrolled'),
+   ('Engineering Degree in Computer Science | ENSEEIHT - Toulouse INP', '2025 - 2028', 'Toulouse, France | Year 2 - HPC & Big Data track (in progress)'),
    ('Preparatory Classes (CPGE MP2I / MPI) | Lycée Janson-de-Sailly', '2022 - 2025', 'Paris, France'),
   ],
   'projects_title': 'SELECTED PROJECTS',
