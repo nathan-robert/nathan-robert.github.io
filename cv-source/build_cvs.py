@@ -21,6 +21,7 @@ SITE_ROOT = ROOT / "dist" if (ROOT / "dist" / "index.html").exists() else ROOT
 OUT = SITE_ROOT / "documents"
 LINKEDIN = "https://www.linkedin.com/in/nathan-robert-b9423a320/"
 PORTFOLIO = "https://nathan-robert.github.io/"
+EMAIL = "nathan.b.robert@gmail.com"
 CPMS = "https://www.cpms.fr/"
 PROJECT_URLS = {
     '2025': 'https://github.com/nathan-robert/prediction-of-the-urbanization-of-New-Delhi',
@@ -158,6 +159,9 @@ def build(lang):
     c.drawRightString(text_right,h-80,portfolio_label)
     tw=pdfmetrics.stringWidth(portfolio_label,FONT,9.3)
     c.linkURL(PORTFOLIO,(text_right-tw,h-83,text_right,h-71),relative=0)
+    c.drawRightString(text_right,h-96,EMAIL)
+    tw=pdfmetrics.stringWidth(EMAIL,FONT,9.3)
+    c.linkURL('mailto:'+EMAIL,(text_right-tw,h-99,text_right,h-87),relative=0)
     code=qr.QrCodeWidget(PORTFOLIO,barBorder=4,barLevel='M')
     x1,y1,x2,y2=code.getBounds()
     qr_size=58

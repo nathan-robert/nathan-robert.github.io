@@ -674,3 +674,11 @@ p { color: var(--muted); }
   .tag-list > span, .tag-list > li, .project-body .tag-list > span { font-size: .8rem; }
 }
 @media (max-width: 360px) { .hero-buttons .button { font-size: .8rem; } .document-flow { transform: scale(.63); } }
+
+/* Direct email contact, in both language versions. */
+.contact-email-row { margin-top: 16px; }
+.contact-email { display: inline-flex; align-items: center; gap: 9px; max-width: 100%; color: #1a3222; font-size: .93rem; font-weight: 650; text-decoration: underline; text-decoration-color: #789980; text-underline-offset: 4px; }
+.contact-email span { min-width: 0; overflow-wrap: anywhere; }
+.contact-email .icon { width: 20px; height: 20px; }
+.contact-email:hover { color: #365941; text-decoration-color: currentColor; }
+.contact-email-row + .button-dark { margin-top: 18px; }
